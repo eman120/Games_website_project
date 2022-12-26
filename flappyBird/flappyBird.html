@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flappy Bird Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flappyBird.css">
+    <script defer src="../Libraries/jQuery.js"></script>
+    <script defer src="flappyBird.js"></script>
 </head>
 <body>
-    
+    <div class="background"></div>
+    <img src="Images/flappy-bird-wing-up.png" alt="bird-img" class="bird" id="bird-1">
+    <div class="message">
+        Enter To Start <p><span style="color:red">&uarr;</span> ArrowUp to Control</p>
+    </div>
+    <div class="score">
+        <span class="score_title"></span>
+        <span class="score_val"></span>
+    </div>
 </body>
 </html>
