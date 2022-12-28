@@ -3,6 +3,8 @@ var bird = $(".bird");
 var img = $("#bird-1");
 let sound_point = new Audio('sounds effect/point.mp3');
 let sound_die = new Audio('sounds effect/die.mp3');
+var currentScore = 0;
+var localScore;
 
 // getting bird element properties
 var bird_props = bird.get(0).getBoundingClientRect();
@@ -20,22 +22,30 @@ var game_state = 'Start';
 img.attr("style" ,"display : none");
 message.addClass('messageStyle');
 
-document.addEventListener('keydown' , (e)=>{
-    if(e.key == 'Enter' && game_state != 'Play'){
-        $('.pipe_sprite').each((index,element) => {
-            element.remove();
-        });
-        img.attr("style" ,"display : block");
-        bird.attr("style" ,"top : 40vh");
-        game_state ='Play';
-        message.html('');
-        score_title.html( 'Score : ');
-        score_val.html('0');
-        message.removeClass('messageStyle'); //message.classList.remove('messageStyle')
-        Play();
-    }
-});
+if(!isFinite(window.localStorage.getItem('ScoreKey')))
+{
+    window.localStorage.setItem('ScoreKey' , 0);
+}
 
+//function startGame(state){
+    document.addEventListener('keydown' , (e)=>{
+        //game_state = state;
+        if(e.key == 'Enter' && game_state != 'Play'){
+            $('.pipe_sprite').each((index,element) => {
+                element.remove();
+            });
+            img.attr("style" ,"display : block");
+            bird.attr("style" ,"top : 40vh");
+            game_state ='Play';
+            message.html('');
+            score_title.html( 'Score : ');
+            score_val.html('0');
+            message.removeClass('messageStyle'); //message.classList.remove('messageStyle')
+            Play();
+        }
+    });
+//}
+//startGame('Start');
 
 function Play()
 {
@@ -58,9 +68,18 @@ function Play()
             else{
                 if(bird_props.left < pipe_sprite_props.left + pipe_sprite_props.width && bird_props.left + bird_props.width > pipe_sprite_props.left && bird_props.top < pipe_sprite_props.top + pipe_sprite_props.height && bird_props.top + bird_props.height > pipe_sprite_props.top)
                 {
+                    localScore = window.localStorage.getItem('ScoreKey');
                     game_state ='End';
                     // message.html('GameOver'.css("color" , "red" ) + '<br>Press Enter To Restart');
-                    message.html('GameOver' + '<br>Press Enter To Restart');
+                    if(localScore > currentScore){
+                        message.html(`GameOver <br> Your score is ${currentScore} <br> Max Score ${localScore}`);
+                    }
+                    else{ // current > local
+                        localScore = currentScore;
+                        window.localStorage.setItem('ScoreKey' , localScore);
+                        message.html(`GameOver Your score is ${localScore}`);
+                    }
+                    // 'GameOver' + '<br>Press Enter To Restart'
                     message.addClass('messageStyle');
                     img.attr("style" ,"display : none");
                     sound_die.play();
@@ -70,6 +89,13 @@ function Play()
                     if(pipe_sprite_props.right < bird_props.left && pipe_sprite_props.right + move_speed >= bird_props.left && element.increase_score =='1')
                     {
                         score_val.html(parseInt(score_val.html()) +1);
+                        currentScore = parseInt(score_val.html());
+                        if(currentScore > localScore)
+                        {
+                            localScore = currentScore;
+                            window.localStorage.setItem('ScoreKey' , localScore);
+                        }
+                        
                         sound_point.play();
                     }
                     element.style.left = pipe_sprite_props.left - move_speed + 'px';
@@ -102,6 +128,8 @@ function Play()
             message.css('left', '28vw');
             //message.attr("style" , "left : 28vw");
             window.location.reload();
+            //game_state ='Play';
+            //startGame('Start');
             message.removeClass('messageStyle');
             return;
         }
