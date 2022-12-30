@@ -1,0 +1,31 @@
+.input-style{
+    width: 90%;
+    margin: auto;
+}
+.main-color{
+    background-color: #24353f;
+}
+body{
+    background-color: #24353f;
+}
+.shadowu{
+box-shadow: -5px 2px 54px -9px #000000f2;;
+}
+.style{
+   height: 500px;
+}
+.color{
+color: #17a2b8;
+
+}
+.btn-outline-dark{
+    color:#17a2b8; 
+    border-color: #17a2b8;
+}
+.btn-outline-dark:hover{
+    background-color: #17a2b8;;
+}
+input {
+    background-color: transparent!important ;
+   
+}
