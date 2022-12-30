@@ -253,7 +253,7 @@ document.getElementById("submit").removeAttribute("disabled");
 //   getMovies("movie/now_playing")
 //   })
   $(".link2").click(function(){
-   // window.open("home.html","_self","","");
+   window.open("../HTML/index.html","_self","","");
   
      
     })
