@@ -1,0 +1,277 @@
+<html>
+    <head>
+        <style> @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap'); </style>
+
+        <link rel="stylesheet" href="MenjaStyle/style.css">
+    </head>
+    <body>
+        <h1></h1>
+        <div class="cursor"></div>
+        <div class="cursor2"></div>
+        <!-- <img   src="12.gif">  -->
+        <img class="I1 ball" width=64px src="1.png">
+        <img  class="I2 ball" width=64px src="3.png">
+        <img class="I3 ball" width=64px src="5.png">
+        <img class="I4 ball" width=64px src="2.png">
+        <img class="I5 ball"  width=64px src="8.png">
+        <img class="I6 ball" width=64px src="4.png">
+        <img class="I7 ball" width=64px src="7.png">
+        <img class="I8 ball" width=64px src="11.png">
+        <img class="I9 ball"  width=64px src="6.png">
+        <img class="I10 ball"  width=64px src="10.png">
+        <img class="I11 ball"  width=64px src="9.png">
+        <div class="result">
+           <div class="wasyt">
+                <div class="score"> 
+<h3 class="state">
+   Good Luck
+</h3>
+
+  <div class="pic">  <img id='statPic'src="win.gif"> </div>
+  <h3 class="display_Score">Your Score : <span class="yourScore"></span></h3>
+  <div><button class="first">Start</button><button class="second">Back to home</button></div>
+                </div>
+            </div> 
+          
+        </div>
+        <script src="MenjaJS/jquery-3.1.0.min.js"></script>
+        <script src="MenjaJS/jquery-ui.min.js"></script>
+        <script src="MenjaJS/jquery.imgexplode.min.js"></script>
+        <script src="MenjaJS/main.js"></script>
+        <script>
+setTimeout(function(){
+    $('.result').show(100)
+},300)
+
+
+var allBall=0;
+var score=0;
+var count =0;
+$('.first').on('click',function(){
+ var cotent = $('.first').text()
+ if(cotent=="Start"){
+    $('.result').hide()
+    start()
+   
+ }
+ else{
+    $('.result').hide()
+    location.reload();
+ }
+    // console.log("first")
+  
+    // start();
+})
+
+
+
+
+
+console.log($('.I1').position().top)
+//let x = Math.floor((Math.random() * 10) + 1);
+
+// display()
+// function display(){
+// $('h1').text(`score:${score}`)
+// }
+var lose=0
+var int =setInterval(function(){
+if($('img').position().top>730){
+    lose++;
+    if(lose==4&&score>5)
+   {
+   $('.state').text('Great Work')
+   $('.display_Score').show()
+  $('.yourScore').text(`${score}`)
+  $('.first').text('Try Again')
+
+$('.result').show(2000)
+clearInterval(int) 
+
+    }
+    // else if(score==0){
+        
+    //     $('.state').text('good Lack')
+    //     $('.display_Score').hide()
+    //     $('.first').text('Start')
+    
+    // }
+    else if(lose==4&&score>1) {
+        $('.display_Score').show()
+    $('.yourScore').text(`${score}`)
+$('.state').text('Game Over')
+$('#statPic').attr('src','lost.gif')
+$('.first').text('Try Again')
+$('.result').show(2000)
+clearInterval(int) 
+
+    }
+
+
+}
+else if(allBall==9){
+    alert("win")
+clearInterval(int) 
+}
+
+
+},100)
+
+
+function start(){
+    allBall=0;
+score=0;
+ count =0;
+    console.log("sara")
+    // $('img').animate({top:'200px'},parseInt(`100`),'easeOutBack',function(){
+    //     $('img').removeAttr('style')
+    // })
+    $('img').stop()
+var AllImages=['I1','I2','I3','I4','I5','I6','I7','I8','I9','I10','I11']
+for(var i=0;i<AllImages.length;i++){
+    $(`.${ AllImages[i]}`).animate({top:'200px'},parseInt(`${i}000`),'easeOutBack').animate({top:'770px'},parseInt(`${i}000`),'easeOutQuad')
+   
+   
+}
+
+$('img').animate({top:'200px'},3000,'easeOutBack').animate({top:'770px'},4000,'easeOutQuad')
+}
+
+$(document).mousemove(function(e){
+            $('.cursor').css({"left": `${e.clientX}px`, "top": `${e.clientY}px`});
+            $('.cursor2').css({"left": `${e.clientX}px`, "top": `${e.clientY}px`});
+        })
+
+
+
+// var AllImages=['I1','I2','I3','I4','I5','I6','I7','I8','I9','I10','I11']
+// for(var i=0;i<AllImages.length;i++){
+//     $(`.${ AllImages[i]}`).animate({top:'200px'},parseInt(`${i}000`),'easeOutBack').animate({top:'700px'},parseInt(`${i}000`),'easeOutQuad')
+   
+// }
+
+$('.ball').mouseover(function(){
+count++;
+if(count %2==0){
+    var sorce= +($(this).attr('src').split('.')[0])
+if(sorce %2==0){
+    $(this).attr('src',`${sorce-1}.png`)
+}
+else{
+    $(this).attr('src',`${sorce+1}.png`)
+}
+
+
+}
+else{
+    score++;
+  // display();
+   allBall++;
+   setTimeout(()=> {
+        $(this).explode({
+            maxWidth: 15,
+            minWidth: 5,
+            radius: 231,
+            release: true,
+            recycle:true,
+            explodeTime: 340,
+            canvas:true,
+            round: false,
+            maxAngle: 360,
+            gravity: 10,
+            groundDistance:$('window').innerHeight(),
+        });
+    }, 200)
+
+
+
+
+}
+ 
+
+
+
+
+})
+ 
+
+
+
+
+// set
+// var int =setInterval(function(){
+// if($('img').position().top>710){
+//     if(score>5){
+// $('.yourScore').text(`${score}`)
+//     }
+//     else if(score==0){
+        
+//         $('.state').text('good Lack')
+//         $('.display_Score').hide()
+//         $('.first').text('Start')
+    
+//     }
+//     else{
+//         $('.yourScore').text(`${score}`)
+// $('.state').text('Game Over')
+// $('#statPic').attr('src','lost.gif')
+//     }
+// $('.result').show(2000)
+// clearInterval(int) 
+// }
+// else if(allBall==9){
+//     alert("win")
+// clearInterval(int) 
+// }
+
+
+// },100)
+
+//
+
+
+// }
+
+//  $('img').animate({top:'200px'},3000,'easeOutBack').animate({top:'770px'},4000,'easeOutQuad')
+   console.log(  $('img'))
+
+
+
+var $target = $("#target");
+function explode() {
+
+    $target.explodeRestore();
+    setTimeout(function () {
+   
+        $target.explode({
+            maxWidth: 15,
+            minWidth: 5,
+            radius: 231,
+            release: true,
+            recycle:true,
+            explodeTime: 340,
+            canvas:true,
+            round: false,
+            maxAngle: 360,
+            gravity: 10,
+            groundDistance:$('window').innerHeight(),
+        });
+    }, 300)
+}
+explode();
+        //      setTimeout(function() {
+        //     $("img").explode({
+        //         maxWidth: 20,
+        //         minWidth: 1,
+        //     });
+        // },200)
+      
+      
+//         $('img') .animate({
+//     left: '250px',
+    
+//   },400)
+       
+        </script>
+    </body>
+</html>
