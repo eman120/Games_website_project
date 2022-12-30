@@ -1,0 +1,31 @@
+#start_btn{
+    margin: auto;
+}
+#start_btn button{
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        font-size: 20px;
+        background-color: #b1cbbe;
+
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+#board{
+        background-color: #b1cbbe;
+}
+#popup{
+    background: white;
+    padding: 30px;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+    border-radius: 5%;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    display: none;
+}
+
