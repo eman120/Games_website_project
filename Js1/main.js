@@ -281,32 +281,45 @@ function slide(){
 }
 setInterval( slide, 2000)
 
-$("#flappy").mouseover(function(){
-  $("#gameHover1").css("display" , "block");
-})
-$("#flappy").mouseout(function(){
-  $("#gameHover1").css("display" , "none");
+$("#gameHover1").hover(function(){
+  $("#gameHover1").css("background-color" , "rgba(0, 0, 0, 0.611)");
+  $("#gameHover1 .t1").css("color" , "rgba(250,250,250)");
+
+}
+,function(){
+  $("#gameHover1").css("background-color" , "rgba(0, 0, 0, 0)");
+  $("#gameHover1 .t1").css("color" , "rgba(250,250,250 , 0)");
 })
    
-$("#menja").mouseover(function(){
-  $("#gameHover2").css("display" , "block");
-})
-$("#menja").mouseout(function(){
-  $("#gameHover2").css("display" , "none");
+$("#gameHover2").hover(function(){
+  $("#gameHover2").css("background-color" , "rgba(0, 0, 0, 0.611)");
+  $("#gameHover2 .t1").css("color" , "rgba(250,250,250)");
+
+}
+,function(){
+  $("#gameHover2").css("background-color" , "rgba(0, 0, 0, 0)");
+  $("#gameHover2 .t1").css("color" , "rgba(250,250,250 , 0)");
 })
 
-$("#snake").mouseover(function(){
-  $("#gameHover3").css("display" , "block");
-})
-$("#snake").mouseout(function(){
-  $("#gameHover3").css("display" , "none");
+
+$("#gameHover3").hover(function(){
+  $("#gameHover3").css("background-color" , "rgba(0, 0, 0, 0.611)");
+  $("#gameHover3 .t1").css("color" , "rgba(250,250,250)");
+
+}
+,function(){
+  $("#gameHover3").css("background-color" , "rgba(0, 0, 0, 0)");
+  $("#gameHover3 .t1").css("color" , "rgba(250,250,250 , 0)");
 })
 
-$("#car").mouseover(function(){
-  $("#gameHover4").css("display" , "block");
-})
-$("#car").mouseout(function(){
-  $("#gameHover4").css("display" , "none");
+$("#gameHover4").hover(function(){
+  $("#gameHover4").css("background-color" , "rgba(0, 0, 0, 0.611)");
+  $("#gameHover4 .t1").css("color" , "rgba(250,250,250)");
+
+}
+,function(){
+  $("#gameHover4").css("background-color" , "rgba(0, 0, 0, 0)");
+  $("#gameHover4 .t1").css("color" , "rgba(250,250,250 , 0)");
 })
 
 
