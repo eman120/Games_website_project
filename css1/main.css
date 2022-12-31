@@ -1,0 +1,270 @@
+body{
+   background-color: #24353f;
+}
+h3{
+    margin-top: 30px;
+    text-align: center;
+    color:#17a2b8;
+}
+.top-input{
+ 
+    border: none;
+    border-bottom: solid 1px rgba(255,255,255,.7);
+    background-color:transparent !important;
+    border-radius: 0!important;
+    text-align: center !important;
+    color: #fff!important;
+   
+   
+}
+.movie{
+    background-color: rgb(131, 107, 102);
+   
+    border-radius: 5px;
+    position: relative;
+    overflow:hidden;
+   
+  
+}
+
+.layer{
+    position: absolute;
+    left:0;
+    top: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255,255,255,.7);
+    border-radius: 5px;
+    transition: all 0.6s;
+    display: flex;
+ 
+ 
+
+}
+.information{
+    width: 100%;
+text-align: center;
+}
+
+.movie:hover .layer {
+    top:0;
+}
+.side-menu{
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: khaki;
+    z-index: 9999;
+
+
+
+}
+.close-open{
+    cursor: pointer;
+}
+.side-menu .left{
+    width: 250px;
+    background-color:#24353f;
+}
+.side-menu .right{
+width: 60px;
+background-color: #f8f6f6;
+}
+.side-menu ul{
+list-style: none;
+
+}
+.btnStyle{
+    border: #17a2b8 solid 1px;
+    color: #17a2b8 !important;
+}
+.btnStyle:hover{
+    border: #17a2b8 solid 1px;
+    color: white !important;
+    background-color: #17a2b8;
+}
+.style4{
+color: #999 !important;
+margin-top:10px;
+font-size :17px;
+font-weight: 300!important;
+}
+.cursor{
+    cursor: pointer;
+}
+.hicon{
+    transition: color 0.5s;
+    color: white;
+    cursor: pointer;
+}
+.hicon:hover{
+    color:#17a2b8;
+}
+.side-menu li{
+   padding-top: 25px;
+   position: relative;
+   left: 30px;
+   transition: color 0.5s;
+   cursor: pointer;
+
+}
+.side-menu li:hover{
+    color: #17a2b8;
+}
+.side-menu li a{
+    color: white;
+    transition: color 0.5s;
+    
+}
+.side-menu li a:hover{
+    color: #17a2b8;
+}
+
+.links {
+    color: white !important;
+    position: relative;
+    overflow:hidden !important;
+}
+.style{
+ 
+    padding-left:30px ;
+   
+    position: absolute;
+    bottom: 30px;
+
+}
+.style2{
+    font-size:25px !important;
+}
+.bottom{
+    bottom: 20px;
+}
+.pading{
+padding: 12px 20px;
+    
+}
+
+#header{
+    
+}
+#logo{
+    position: relative;
+    width: 90px;
+    height: 70px;
+    top: 5px ;
+    left: 60px;
+    
+}
+#word{
+    color: rgb(251, 251, 255);
+    position: relative;
+    width: 50px;
+    height: 40px;
+    top: 12px ;
+    left: 30px;
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+hr{
+    color:white;
+}
+
+#home{
+    height: 97vh;
+    width: 100vw;
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;*/
+    background-size:cover;
+}
+#homeDiv{
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.611);
+    top: 17%;
+}
+
+#txt1{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+#flappy{
+    width: 400px;
+    height: 400px;
+}
+#menja{
+    width: 400px;
+    height: 400px;
+}
+#snake{
+    width: 400px;
+    height: 400px;
+}
+#car{
+    width: 400px;
+    height: 400px;
+}
+
+.game {
+    margin: 3%;
+    position: relative;
+}
+
+.t1 {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    color: rgb(253, 250, 250);
+}
+#gameHover1{
+    display: none;
+    background-color: rgba(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.611);
+    width: 77%;
+    height: 100%;
+    position: absolute;
+    top:0%;
+}
+#gameHover2{
+    display: none;
+    background-color: rgba(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.611);
+    width: 77%;
+    height: 100%;
+    position: absolute;
+    top:0%;
+}
+#gameHover3{
+    display: none;
+    background-color: rgba(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.611);
+    width: 77%;
+    height: 100%;
+    position: absolute;
+    top:0%;
+}
+#gameHover4{
+    display: none;
+    background-color: rgba(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.611);
+    width: 77%;
+    height: 100%;
+    position: absolute;
+    top:0%;
+}
+
+h5{
+    color: #fff;
+}
