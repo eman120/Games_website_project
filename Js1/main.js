@@ -116,6 +116,8 @@ let phonelReg;
 let ageReg;
 let passReg;
 let repassReg;
+
+
 nameEL.addEventListener("keyup",function(){
 nameReg=/^[A-Z a-z]{3,9}$/
 let id =document.getElementById("nameAl")
@@ -274,9 +276,41 @@ document.getElementById("submit").removeAttribute("disabled");
 
       // console.log(sara);
       // sara = "sad and makmosa";
+     
       
+function slide(){
+  $("#logoAnimate").fadeToggle("slow");
+  //$("#txt1").slideToggle("slow");
+}
+setInterval( slide, 2000)
 
+$("#flappy").mouseover(function(){
+  $("#gameHover1").css("display" , "block");
+})
+$("#flappy").mouseout(function(){
+  $("#gameHover1").css("display" , "none");
+})
    
+$("#menja").mouseover(function(){
+  $("#gameHover2").css("display" , "block");
+})
+$("#menja").mouseout(function(){
+  $("#gameHover2").css("display" , "none");
+})
+
+$("#snake").mouseover(function(){
+  $("#gameHover3").css("display" , "block");
+})
+$("#snake").mouseout(function(){
+  $("#gameHover3").css("display" , "none");
+})
+
+$("#car").mouseover(function(){
+  $("#gameHover4").css("display" , "block");
+})
+$("#car").mouseout(function(){
+  $("#gameHover4").css("display" , "none");
+})
 
 
 
