@@ -293,12 +293,12 @@ $("#gameHover1").hover(function(){
    
 $("#gameHover2").hover(function(){
   $("#gameHover2").css("background-color" , "rgba(0, 0, 0, 0.611)");
-  $("#gameHover2 .t1").css("color" , "rgba(250,250,250)");
+  $("#gameHover2 .t2").css("color" , "rgba(250,250,250)");
 
 }
 ,function(){
   $("#gameHover2").css("background-color" , "rgba(0, 0, 0, 0)");
-  $("#gameHover2 .t1").css("color" , "rgba(250,250,250 , 0)");
+  $("#gameHover2 .t2").css("color" , "rgba(250,250,250 , 0)");
 })
 
 
@@ -314,12 +314,12 @@ $("#gameHover3").hover(function(){
 
 $("#gameHover4").hover(function(){
   $("#gameHover4").css("background-color" , "rgba(0, 0, 0, 0.611)");
-  $("#gameHover4 .t1").css("color" , "rgba(250,250,250)");
+  $("#gameHover4 .t2").css("color" , "rgba(250,250,250)");
 
 }
 ,function(){
   $("#gameHover4").css("background-color" , "rgba(0, 0, 0, 0)");
-  $("#gameHover4 .t1").css("color" , "rgba(250,250,250 , 0)");
+  $("#gameHover4 .t2").css("color" , "rgba(250,250,250 , 0)");
 })
 
 

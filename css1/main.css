@@ -212,7 +212,7 @@ hr{
 
 #menja{
     width: 300px;
-    height: 250px;
+    height: 232px;
 }
 #snake{
     width: 330px;
@@ -220,13 +220,14 @@ hr{
 }
 #car{
     width: 300px;
-    height: 250px;
+    height: 232px;
 }
 
 .game {
     margin: 3%;
     position: relative;
     width: 100%;
+    left: 20%;
 }
 
 .t1 {
@@ -235,6 +236,15 @@ hr{
     left: 50px;
     color: rgba(253, 250, 250, 0);
 }
+
+.t2 {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    color: rgba(253, 250, 250, 0);
+    font-size: 20px;
+}
+
 #gameHover1{
     display: block;
     background-color: rgba(0, 0, 0, 0);
@@ -273,6 +283,8 @@ hr{
 h5{
     color: #fff;
     font-family: 'Architects Daughter', cursive;
+    
+    text-align: center;
 }
 
 /* 
