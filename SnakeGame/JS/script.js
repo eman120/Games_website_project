@@ -177,3 +177,9 @@ function placeFood(){
     foodx=Math.floor(Math.random()*cols)*blockSize;
     foody=Math.floor(Math.random()*rows)*blockSize;
 }
+
+
+$(".second").click(function(){
+    window.open("/home.html","_self","","");
+
+})

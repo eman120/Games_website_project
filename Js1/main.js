@@ -255,23 +255,20 @@ document.getElementById("submit").removeAttribute("disabled");
 //   getMovies("movie/now_playing")
 //   })
   $(".link2").click(function(){
-   window.open("../HTML/index.html","_self","","");
-  
-     
+   window.open("../HTML/index.html","_self","",""); 
     })
+
     $(".link3").click(function(){
-     // window.open("home.html","_self","","");
-       
+     window.open("../SnakeGame/HTML/index.html","_self","","");
       })
      
   $(".link4").click(function(){
+    window.open("../flappyBird/flappyBird.html","_self","","");
+  })
+
+  $(".link5").click(function(){
     window.open("Menja.html","_self","","");
-     
-    })
-    $(".link5").click(function(){
-     // window.open("home.html","_self","","");
-       
-      })
+  })
 
 
       // console.log(sara);

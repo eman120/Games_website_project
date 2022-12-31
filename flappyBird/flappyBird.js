@@ -173,3 +173,8 @@ function Play()
     }
     requestAnimationFrame(create_pipe);
 }
+
+$(".second").click(function(){
+    window.open("../home.html","_self","","");
+
+})

@@ -93,3 +93,13 @@
         width: 14vw;
     }
 }
+
+button{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #dfa0f1;
+    border-color: rgb(139, 170, 198);
+
+}
