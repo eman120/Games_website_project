@@ -12,9 +12,11 @@
 body{
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    background-image: url("../snakeGame.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
 }
 #board{
-        background-color: #b1cbbe;
 }
 #popup{
     background: white;
