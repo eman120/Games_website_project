@@ -19,33 +19,29 @@ var score_val = $(".score_val");
 var score_title = $(".score_title");
 
 var game_state = 'Start';
-img.attr("style" ,"display : none");
+img.attr("style" ,"display : none"); //vanish the bird
 message.addClass('messageStyle');
 
 if(!isFinite(window.localStorage.getItem('ScoreKey')))
 {
-    window.localStorage.setItem('ScoreKey' , 0);
+    window.localStorage.setItem('ScoreKey' , 0); // store the max score in local storage
 }
 
-//function startGame(state){
     document.addEventListener('keydown' , (e)=>{
-        //game_state = state;
         if(e.key == 'Enter' && game_state != 'Play'){
             $('.pipe_sprite').each((index,element) => {
                 element.remove();
             });
-            img.attr("style" ,"display : block");
+            img.attr("style" ,"display : block"); //show the bird
             bird.attr("style" ,"top : 40vh");
             game_state ='Play';
             message.html('');
             score_title.html( 'Score : ');
-            score_val.html('0');
-            message.removeClass('messageStyle'); //message.classList.remove('messageStyle')
+            score_val.html('0'); //score : 0
+            message.removeClass('messageStyle'); //remove style from the message 
             Play();
         }
     });
-//}
-//startGame('Start');
 
 function Play()
 {
@@ -53,10 +49,6 @@ function Play()
     {
         if(game_state != 'Play') return;
         var pipe_sprite = $('.pipe_sprite');
-        //var pipe_sprite = document.querySelectorAll('.pipe_sprite');
-        // pipe_sprite.forEach((element) => {
-        //     let pipe_sprite_props = element.getBoundingClientRect();
-        //     bird_props = bird.get(0).getBoundingClientRect();
         $('.pipe_sprite').each((index , element) =>{
             var pipe_sprite_props = element.getBoundingClientRect();
             bird_props = bird[0].getBoundingClientRect();
@@ -70,7 +62,6 @@ function Play()
                 {
                     localScore = window.localStorage.getItem('ScoreKey');
                     game_state ='End';
-                    // message.html('GameOver'.css("color" , "red" ) + '<br>Press Enter To Restart');
                     if(localScore > currentScore){
                         message.html(`GameOver <br> Your score is ${currentScore} <br> Max Score ${localScore}`);
                     }
@@ -79,7 +70,6 @@ function Play()
                         window.localStorage.setItem('ScoreKey' , localScore);
                         message.html(`GameOver Your score is ${localScore}`);
                     }
-                    // 'GameOver' + '<br>Press Enter To Restart'
                     message.addClass('messageStyle');
                     img.attr("style" ,"display : none");
                     sound_die.play();
@@ -126,14 +116,10 @@ function Play()
         if(bird_props.top <= 0 || bird_props.bottom >= background.bottom){
             game_state ='End';
             message.css('left', '28vw');
-            //message.attr("style" , "left : 28vw");
             window.location.reload();
-            //game_state ='Play';
-            //startGame('Start');
             message.removeClass('messageStyle');
             return;
         }
-        //bird.offset().top = bird_props.top + bird_dy + 'px';
         bird.css('top' ,  bird_props.top + bird_dy + 'px')
         bird_props = bird[0].getBoundingClientRect();
         requestAnimationFrame(apply_gravity);
@@ -149,24 +135,23 @@ function Play()
 
         if (pipe_seperation > 115){
             pipe_seperation = 0;
-            var pipe_posi = Math.floor(Math.random() * 43) +8;
-            var pipe_sprite_inv = document.createElement('div');
+            //Top pipe
+            var pipe_posi = Math.floor(Math.random() * 43) +8; //position => 0.4 * 43 = floor(17.2) = 17 + 8 = 25
+            var pipe_sprite_inv = document.createElement('div'); //create top pipe div //onverse
             pipe_sprite_inv.className = 'pipe_sprite';
-            // pipe_sprite_inv.css('top' ,  pipe_posi - 70 + 'vh');
-            // pipe_sprite_inv.css('left' , '100vw');
-            pipe_sprite_inv.style.top = pipe_posi - 70 + 'vh';
+            pipe_sprite_inv.style.top = pipe_posi - 70 + 'vh'; //25-70 = -45 vh
             pipe_sprite_inv.style.left = '100vw';
 
-            $(document.body).append(pipe_sprite_inv);
-            var pipe_sprite = document.createElement('div');
-            pipe_sprite.className = 'pipe_sprite';
-            // pipe_sprite.css('top' , pipe_posi + pipe_gap + 'vh');
-            // pipe_sprite.css('left' , '100vw');
-            pipe_sprite.style.top = pipe_posi + pipe_gap + 'vh';
-            pipe_sprite.style.left = '100vw';
-            pipe_sprite.increase_score = '1';
+            $(document.body).append(pipe_sprite_inv); //append the top div
 
-            $(document.body).append(pipe_sprite);
+            var pipe_sprite = document.createElement('div'); //create bottom pipe div
+            pipe_sprite.className = 'pipe_sprite';
+            pipe_sprite.style.top = pipe_posi + pipe_gap + 'vh'; // 25 + 35 = 60
+            pipe_sprite.style.left = '100vw';
+
+            pipe_sprite.increase_score = '1'; //increase score 
+
+            $(document.body).append(pipe_sprite); //append the bottom div
         }
         pipe_seperation ++;
         requestAnimationFrame(create_pipe);
