@@ -6,6 +6,8 @@ It also has a log in and sign up pages.
 
 At the end of the Home page, there is "contact us" section.
 
+It is developed using HTML5, CSS3, JavaScript, jQuery, and Bootstrap.
+
 
 https://user-images.githubusercontent.com/76956637/216959306-d4f2f92d-f15c-4cbb-b81f-cd58856c03ab.mp4
 
