@@ -97,34 +97,68 @@
   </section> -->
   <section>
     <header id="header">
-      <img src="/img/logo2.png" id = "logo" >
-      <span id="word">2SEA</span>
+      <div class="head">
+        <div>
+          <img src="/img/logo2.png" id = "logo" >
+          <span id="word">2SEA</span>
+        </div>
+        <div>
+          <button  id="logout" type="button" class="btn  "> Logout</button>
+        </div>
+      </div>
+     
     </header>
-    <hr>
+    <!-- <hr> -->
     <div>
-      <img src="/img/HOME.jpg" alt="" id="home">
+      <!-- <img src="/img/HOME.jpg" alt="" id="home"> -->
       <div id="homeDiv">
-        <img src="/img/logo2.png" id = "logoAnimate" >
-        <p id="txt1">
-          <span style="color: aqua; font-size: 40px;font-family: 'Architects Daughter', cursive;">
-            The Best Games Out There:
-          </span>
-          <br>
-          Video games, also known as computer games, are electronic games that involves interaction with a user interface or input device 
-          <!-- <br>
-          such as a joystick, controller, keyboard, or motion sensing device , to generate visual feedback. -->
-        </p>
+        <div class="layer">
+          <div class="cont">
+            <div class="pic">
+              <img  src="/img/logo2.png" id = "logoAnimate" >
+                      </div>
+                      <div class="parg">
+                        <p id="txt1">
+                          <span style="color: aqua; font-size: 40px;font-family: 'Architects Daughter', cursive;">
+                            The Best Games Out There:
+                          </span>
+                          <br>
+                          Video games, also known as computer games, are electronic games that involves interaction with a user interface or input device 
+                          <!-- <br>
+                          such as a joystick, controller, keyboard, or motion sensing device , to generate visual feedback. -->
+                        </p>
+                      </div>
+          </div>
+         
+        
+          
+        </div>
+        
+       
       </div>
     </div>
   </section>
-  
-  <section style="background-color: #425a66;" >
+  <!-- style="background-color: #425a66;" -->
+  <section >
     <br>
+   <div class="portfolio">
+          <div class="hidden">
+            <h2>
+           OUR GAMES
+            </h2>
+      
+            <!-- <div class="appear">
+              <p>
+                O<span>ur  Gam</span>es
+              </p> -->
+      
+            </div>
+          </div>
   <div class="row">
     <div class="col-lg-1 col-md-1 p-0">
     </div>
     <div class="col-lg-3 col-md-5 p-0">
-    <h5>Flappy Bird</h5>
+    <!-- <h5>Flappy Bird</h5> -->
     <div class ="game">
       <img src="/img/flappyBird.png" alt="" id="flappy">
       <div id="gameHover1">  
@@ -140,7 +174,7 @@
     </div>
 
     <div class="col-lg-3 col-md-5 p-0">
-      <h5>Menja Game</h5>
+      <!-- <h5>Menja Game</h5> -->
       <div class ="game">
         <img src="/img/menja.png" alt="" id="menja">
         <div id="gameHover2">  
@@ -152,8 +186,9 @@
             the shapes 
           </h3>
         </div>
-        <h5>Car Race</h5>
-
+        <!-- <h5>Car Race</h5> -->
+        <br>
+        <br>
         <img src="/img/cars.png" alt="" id="car">
         <div id="gameHover4">  
           <h3 class="t2">
@@ -169,21 +204,78 @@
       </div>
       
       <div class="col-lg-3 col-md-5 p-0">
-        <h5>Snake Game</h5>
+        <!-- <h5>Snake Game</h5> -->
         <div class ="game">
           <img src="/img/snake.jpeg" alt="" id="snake">
         <div id="gameHover3">  
           <h3 class="t1">
             Snake Game :
-            <br>
-            You have to eat all
-            <br>
-            the food
+              <br>
+              You have to eat all
+              <br>
+              the food
+         
           </h3>
         </div>
       </div>
     </div>
     
+
+    <!-- /* potfolio */
+    .hidden{
+        position: relative;
+           display: flex;
+           justify-content: center;
+          
+          
+           
+        }
+        .hidden h2{
+           color: #dee3e4;
+           opacity: 0.4;
+           font-size: 140px;
+           font-weight: 600 !important;
+          margin-bottom: 30px;
+        
+        }
+        .appear{
+           width: 100%;
+           position: absolute;
+           top: 35%;
+           left: 0;
+           text-align: center;
+          
+           
+        
+        }
+        .appear p{
+           font-size: 35px;
+           font-weight: 550 !important;
+        
+        }
+        .appear span{
+           border-bottom: solid 3px #17a2b8;
+        }
+        .appear .pdd{
+           border-bottom: solid 3px #17a2b8;
+           padding:0 5px 5px 5px;
+        } -->
+
+
+        <!-- <div class="portfolio">
+          <div class="hidden">
+            <h2>
+              SUMMARY
+            </h2>
+      
+            <div class="appear">
+              <p>
+                O<span>ur  Gam</span>es
+              </p>
+      
+            </div>
+          </div> -->
+
   <!-- <div class="col-lg-1 col-md-1 p-0">
   </div>
   <div class="col-lg-1 col-md-1 p-0">
@@ -209,16 +301,30 @@
     </div>
 </section>
 
-<hr>
+<!-- <hr> -->
 
   <section class="pt-4" id="contactus">
+   
     <div class="container w-75">
       <div class="row ">
-        <h3 class="text-white fw-light">Contact Us...</h3>
+        <!-- <h3 class="text-white fw-light">Contact Us...</h3> -->
+        <div class="portfolio">
+          <div class="hidden">
+            <h2>
+     CONTACT US 
+            </h2>
+      
+            <!-- <div class="appear">
+              <p>
+                O<span>ur  Gam</span>es
+              </p> -->
+      
+            </div>
+          </div>
         <form>
           <div class="row">
               <div class="col-md-6 pe-3  mb-4">
-                <input type="text" class="form-control top-input w-100 pe-4 " placeholder="Enter Your Name" id="name">
+                <input type="text" class="form-control top-input w-100 pe-4 " placeholder="Enter Your Name" id="name" name="name">
                 <div class="alert alert-danger w-100 pading m-0  d-none" role="alert" id="nameAl">
                   Your Name is not valid
 
@@ -226,9 +332,9 @@
               </div>
 
               <div class="col-md-6 ps-3  mb-4">
-                <input type="text" class="form-control top-input  w-100" placeholder="Enter Email" id="email">
+                <input type="text" class="form-control top-input  w-100" placeholder="Enter Email" id="email" name="email">
                 <div class="alert alert-danger w-100 pading m-0 d-none" role="alert" id="emailAl">
-                  entre valid email
+                  enter valid email
                 </div>
               </div>
           
@@ -237,15 +343,15 @@
           
 
               <div class="col-md-6 pe-3  mb-4">
-                <input type="text" class="form-control top-input w-100 pe-4 " placeholder="Enter Phone" id="phone">
+                <input type="text" class="form-control top-input w-100 pe-4 " placeholder="Enter Phone" id="phone" name="phone">
                 <div class="alert alert-danger w-100 pading m-0  d-none" role="alert" id="phoneAL">
-                  entre valid phone
+                  enter valid phone
                 </div>
               </div>
               <div class="col-md-6 ps-3  mb-4">
-                <input type="text" class="form-control top-input  w-100" placeholder="Enter Age" id="age">
+                <input type="text" class="form-control top-input  w-100" placeholder="Enter Age" id="age" name="age">
                 <div class="alert alert-danger w-100 pading m-0 d-none" role="alert" id="ageAL">
-                  entre valid Age
+                  enter valid Age
                 </div>
               </div>
          
@@ -255,15 +361,15 @@
 
               <div class="col-md-6 pe-3  mb-4">
                 <input type="password" class="form-control top-input w-100 pe-4 " placeholder="Enter Password"
-                  id="password">
+                  id="password" name="password">
                 <div class="alert alert-danger w-100 pading m-0  d-none" role="alert" id="passAL">
-                  entre valid password *Minimum eight characters, at least one letter and one number:*
+                  enter valid password *Minimum eight characters, at least one letter and one number:*
                 </div>
               </div>
               <div class="col-md-6 ps-3  mb-4">
-                <input type="password" class="form-control top-input  w-100" placeholder="Enter RePassword" id="repassword">
+                <input type="password" class="form-control top-input  w-100" placeholder="Enter RePassword" id="repassword" name="repassword">
                 <div class="alert alert-danger w-100 pading m-0 d-none" role="alert" id="repassAL">
-                 entre valid Repassword
+                 it doesn't match the password
                 </div>
              
             </div>
@@ -282,7 +388,7 @@
   <script src="JS1/popper.min.js"></script>
   <script src="JS1/bootstrap.min.js"></script>
   <script src="JS1/jquery-3.6.0.js"></script>
-
+  <script  src="js/home.js"></script>
 
   <script src="JS1//main.js"></script>
 

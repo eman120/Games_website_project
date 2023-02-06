@@ -27,6 +27,11 @@ color: #17a2b8;
 }
 input {
     background-color: transparent!important ;
+    
    
 }
 
+.form-control {
+
+    color: white !important;
+}

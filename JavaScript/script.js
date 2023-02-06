@@ -177,6 +177,9 @@ console.log(container_width);
         return true;
     }
 
+    $(".second").click(function(){
+        window.open("../home.html","_self","","");
 
+    })
 
 });
