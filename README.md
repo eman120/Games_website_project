@@ -1,5 +1,11 @@
 # Games_website_project
 
+Gaming website has 4 different games : Flappy Bird - Snake - Manja - Car.
 
-https://user-images.githubusercontent.com/76956637/210158005-02d99ec8-0ae1-4259-ac0b-699db0837e7f.mp4
+It also has a log in and sign up pages.
+
+At the end of the Home page, there is "contact us" section.
+
+
+https://user-images.githubusercontent.com/76956637/216959306-d4f2f92d-f15c-4cbb-b81f-cd58856c03ab.mp4
 
